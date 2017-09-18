@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Entertainment Center</title>
+</head>
+<body>
+  <div class="container">
+    <form class="form-signin">
+        <h2 class="form-signin-heading">Create an account</h2>
+        
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="emailId" [(ngModel)]="registerData.emailId" id="inputEmail" class="form-control" placeholder="Email address" required autofocus ><br>
+       
+         <label for="inputPassword" class="sr-only">Name</label>
+        <input type="text" name="name" [(ngModel)]="registerData.name"  id="inputPassword" class="form-control" placeholder="Enter Name" required ><br>
+       
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" [(ngModel)]="registerData.password"  id="inputPassword" class="form-control" placeholder="Password" required="Required"><br>
+        
+        <label for="inputPassword" class="sr-only">Phone Number</label>
+        <input type="text" name="phone_number" [(ngModel)]="registerData.phone_number"  id="inputPassword" class="form-control" placeholder="Enter Phone Number" required ><br>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="button" (click)="register(registerData)">Register for free</button>
+      </form>
+  </div> 
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

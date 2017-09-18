@@ -1,0 +1,17 @@
+
+
+
+<div class="container">
+    <div class="row" reponsive-sm wrap >    
+		<div class="container col-md-4 col-md-4 col-md-4" *ngFor="let movie of list.results  | paginate:{itemsPerPage:10, currentPage:p}">	
+			<app-detail *ngIf="movie" [movie]="movie"></app-detail>
+			</div>
+			
+		<app-favourite-list [favourite]="movie"></app-favourite-list>
+	</div>
+</div>			
+
+<div>
+    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+</div>
+     

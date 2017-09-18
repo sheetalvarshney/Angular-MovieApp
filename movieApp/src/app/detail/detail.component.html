@@ -1,0 +1,9 @@
+
+
+<h4 class="card-title">{{movie.title}}</h4>
+<img class="card-img-top" src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}">
+<div class="card-text">{{movie.release_date}}</div><br>
+
+
+    <button type="button" class="btn btn-outline-primary" (click)="insertMovie(movie)"> 
+        Add To Favourites</button>

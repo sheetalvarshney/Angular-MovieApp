@@ -1,0 +1,46 @@
+ 
+
+
+
+
+
+<div class="container-fluid">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand">Entertainment Center</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/home-page" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <a  (click)="display()" class="btn btn-outline-success" >Favourites List</a>
+            </ul>
+        </div> 
+    </nav>
+</div>
+
+
+
+     <!-- <a   (click)="display()" class="btn btn-outline-success" >Favourites List</a> -->
+<div class="container">  
+  <div  *ngIf="displayData" class="row" reponsive-sm wrap >
+        <div class="container col-md-4 col-md-4 col-md-4"  *ngFor=" let movie of displayData | paginate:{itemsPerPage:10, currentPage:p} ">
+            {{movie.title}}<br>
+            {{movie.release_date}}<br>
+            {{movie.vote_count}}<br>
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}"><br>
+			<button type="button" class="btn btn-outline-primary" (click)="delete(movie)">Delete</button>
+			<button type="button" class="btn btn-outline-primary" (click)="likeMovie(movie)">Like</button>
+            <button type="button" class="btn btn-outline-primary" (click)="unlikeMovie(movie)">UnLike</button>
+
+        </div>
+    </div>
+  </div>
+  
+		
+<div>
+    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+</div>
+     

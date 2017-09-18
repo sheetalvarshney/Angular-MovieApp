@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Entertainment Center</title>
+</head>
+<body>
+  <div class="container">
+    <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="emailId" [(ngModel)]="loginData.emailId" id="inputEmail" class="form-control" placeholder="Email address" required="Required" autofocus ><br>
+       
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" [(ngModel)]="loginData.password" id="inputPassword" class="form-control" placeholder="Password" required="Required" >
+       
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login(loginData)">Sign in</button>
+         <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="callRegister()">Register</button>
+         
+         
+      </form>
+  </div> 
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
